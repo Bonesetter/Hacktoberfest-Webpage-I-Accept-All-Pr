@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Calcule Área e Volume de Cubos</h1>
+
+<p>Insira o comprimento da aresta do cubo:</p>
+<form id="frm1" action="">
+    <input type="text" name="fname" value=""><br>
+</form><br> 
+
+
+<button type="button" onclick="Calcular()"> Calcular </button>
+
+
+<p id="volume"></p>
+<p id="area"></p>
+
+<script>
+  function Calcular() {
+    var x = document.getElementById("frm1");
+    let comprimento = x.elements[0].value;
+
+    let area = 6 * comprimento * comprimento
+
+    let volume = comprimento * comprimento * comprimento
+
+
+    document.getElementById("volume").innerHTML = "Volume: " + volume + " metros cubicos"
+    document.getElementById("area").innerHTML = "Área: " + area + " metros quadrados"
+
+  }
+</script>
+</body>
+</html>
